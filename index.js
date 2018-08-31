@@ -31,6 +31,27 @@ app.get('/', function(req, res){
         }
     ]
 
+    let toys = [
+        {
+            type:'dog toys',
+            size:'medium'  
+        },
+        {
+            type: 'cat toys', 
+            size: 'small'
+        }
+    ]
+
+    let foods = [
+        {
+            brand: 'Blue Buffalo', 
+            flavor: 'fish' 
+        },
+        { 
+            brand: 'Science Diet',
+            flavor: 'chicken'
+        }
+    ]
     let combinedAge = addUpAllAges(dogs, 'age')
 
 
@@ -40,7 +61,9 @@ app.get('/', function(req, res){
         allMyDogs: dogs, 
         tagline: tagline,
         combinedAge: combinedAge,
-        allMyCats: cats
+        allMyCats: cats,
+        toys: toys,
+        foods: foods, 
     });
 
 });

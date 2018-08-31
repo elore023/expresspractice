@@ -14,6 +14,17 @@
             <% allMyCats.forEach(function(cat) { %>
                 <li><%= cat.Color %> (<%= cat.Breed %>)</li>
             <% }) %>            
+        <ul>
+        <h1>Pet Toys</h1>
+            <% toys.forEach(function(toy) { %>
+                <li><%= toy.type %> (<%= toy.size %>)</li>
+            <% }) %> 
+        </ul>
+        <ul>
+            <h1>Dog Food</h1>
+            <% foods.forEach(function(food) { %>
+                <li><%= food.brand %> Flavor: <%= food.flavor %></li>
+            <% }) %> 
         </ul>
         <p>Combined age: <%= combinedAge %></p>
     </div>
