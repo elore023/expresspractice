@@ -1,0 +1,17 @@
+
+
+<main class="container">
+    <% include ../partials/header %>
+    <div id="jumbo" class="jumbotron" >
+        <h1><%= tagline %></h1>
+        <ul>
+            <% allMyDogs.forEach(function(dog) { %>
+                <li><%= dog.color %> (<%= dog.breed %>) <span class="age">Age: <%= dog.age %></span></li>
+            <% }) %>
+        </ul>
+        <p>Combined age: <%= combinedAge %></p>
+    </div>
+    <a href="about" class="link">About</a>
+<% include ../partials/footer %>
+</main>
+
