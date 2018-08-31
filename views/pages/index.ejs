@@ -9,9 +9,17 @@
                 <li><%= dog.color %> (<%= dog.breed %>) <span class="age">Age: <%= dog.age %></span></li>
             <% }) %>
         </ul>
+        <h1>All My Cats</h1>
+        <ul>
+            <% allMyCats.forEach(function(cat) { %>
+                <li><%= cat.Color %> (<%= cat.Breed %>)</li>
+            <% }) %>            
+        </ul>
         <p>Combined age: <%= combinedAge %></p>
     </div>
     <a href="about" class="link">About</a>
+</div> 
+<a href="contact" class="link">Contact Us</a>
 <% include ../partials/footer %>
 </main>
 

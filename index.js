@@ -20,6 +20,17 @@ app.get('/', function(req, res){
         }, 0)
     }
 
+    let cats = [
+        {
+            Color: 'orange',
+            Breed: 'tabby'
+        },
+        {
+            Color: 'black', 
+            Breed: 'stray'
+        }
+    ]
+
     let combinedAge = addUpAllAges(dogs, 'age')
 
 
@@ -28,13 +39,18 @@ app.get('/', function(req, res){
     res.render('pages/index', {
         allMyDogs: dogs, 
         tagline: tagline,
-        combinedAge: combinedAge
+        combinedAge: combinedAge,
+        allMyCats: cats
     });
 
 });
 
 app.get('/about', function(req, res){
     res.render('pages/about')
-})
+});
+
+app.get('/contact', function(req, res){
+    res.render('pages/contact')
+});
 
 app.listen(3040);
